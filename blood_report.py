@@ -68,6 +68,8 @@ def standardize_blood_report(report):
     standardized_blood_test_json = json.loads(
         conversion_response.content.replace("```json", "").replace("```", "")
     )
+    
+    print('[INFO] standardized_blood_test_json:', standardized_blood_test_json)
 
     return {
         "standardized_blood_test_json": standardized_blood_test_json,
@@ -83,9 +85,6 @@ def collect_reasons(standardized_blood_test_json, gender):
     else:
         _base_structure.update(base_structure_female)
         
-    print('base:', _base_structure)
-    print('json:', standardized_blood_test_json)
-
     for test_name, test_value in standardized_blood_test_json.items():
         if test_name in _base_structure:
             if test_value["value"] is not None and _base_structure[test_name]["upper_limit"] is not None and _base_structure[test_name]["lower_limit"] is not None:
