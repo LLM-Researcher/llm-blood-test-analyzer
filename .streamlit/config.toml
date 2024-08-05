@@ -1,9 +1,7 @@
-[client]
-showErrorDetails=true
-
 [theme]
 primaryColor="#2980b9"
 backgroundColor="#f2f2f2"
 secondaryBackgroundColor="#a3e4d7"
 textColor="#2c3e50"
 font="monospace"
+accentColor = "#c0392b"
