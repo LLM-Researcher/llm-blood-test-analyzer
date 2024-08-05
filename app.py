@@ -4,6 +4,11 @@ import tempfile
 
 st.title("Blood Report Analyzer")
 
+gender_option = st.selectbox(
+    "Gender",
+    ("Male", "Female"),
+)
+
 uploaded_file = st.file_uploader(
     accept_multiple_files=False,
     type=["pdf"],
@@ -20,7 +25,7 @@ if uploaded_file is not None:
             with tempfile.NamedTemporaryFile() as tmp_file:
                 tmp_file.write(bytes_data)
                 temp_file_path = tmp_file.name
-                answer = analyze_blood_report(temp_file_path)
+                answer = analyze_blood_report(temp_file_path, gender=gender_option)
 
                 tmp_file.flush()
                 tmp_file.seek(0)
