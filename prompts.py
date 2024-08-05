@@ -87,6 +87,10 @@ extract_blood_test_prompt = """
 You are an excellent blood test report reader. I will provide you a blood test report and you will find all the test cases in the report. Extract the test name, its result, and its unit.
 The test name can be different across each report, so use your perfect knowledge to map to the listed name as I provided below. You will only extract the tests that exist in the blood test report and are also listed below:
 Haemoglobin (HGB), Homocysteine, Red Blood Cells, Haematocrit (HCT), Mean Cell Volume (MCV), Red Cell Distribution Width (RDW), Mean Cell Haemoglobin (MCH), MCHC, Platelets, Platelet Volume (MPV), White Blood Cells, Neutrophils, Lymphocytes, Monocytes, Basophils, Eosinophils, Ferritin, Calcium, Insulin (fasting), Glucose, HOMA - IR Score, ESR, Globulin, Albumin, Creatine Kinase (CK), C-Reactive Protein (CRP), Total Protein, HbA1c-(IFCC), Iron, Transferrin, Transferrin Saturation, T.I.B.C, Cystatin C, Sodium, Potassium, Chloride, Phosphorus, Urea / BUN, Creatinine, eGFR(MDRD)(Caucasian only), AST, Alanine Transaminase (ALT), Gamma-Glutamyl Transferase (GGT), LDH, Total Bilirubin, Alk Phosphatase (ALP), Uric Acid, Cholesterol, HDL, LDL, Triglycerides, Chol:HDL ratio, Non HDL Cholesterol, Cortisol (Random), Testosterone, Free-Testosterone (Calculated), Prolactin, Oestradiol, Progesterone, LH, FSH, DHEA-Sulphate, Sex Hormone Binding Globulin (SHBG), TSH, Free T4 (Thyroxine), Free T3 (Triiodothyronine), Total PSA, Anti-Thyroglobulin abs, Anti-Thyroidperoxidase abs, Vitamin D (25 OH), B12-Active, Serum Folate, Folate, Magnesium.
+
+Answer structure: {<test_name>: {unit: <unit>, value: <value>}}
+Example answer: {"Haemoglobin (HGB)": {unit: "g/L", value: "140"},"Homocysteine": {unit: "umol/L", value: "30"}}
+
 Here is the blood test report:
 """
 
