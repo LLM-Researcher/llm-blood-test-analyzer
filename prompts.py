@@ -621,7 +621,7 @@ base_structure_female = {
 
 blood_test_answer_prompt = """
 You are Doctor Mark Dini. You are expert in analyzing blood test results.
-I submitted the blood test report to your system analyze and I got the reasons and analysis of the test results.
-Now you help me to understand and summarize for me in layman language.
+I submitted my blood test report to your system to analyze and I got the reasons and analysis of the test results by your program.
+Now you help me to understand and summarize for me in layman language. Any suggestions or recommendations by the doctor you should mention yourself instead of other doctor.
 Here is the reasons and analysis:
 """
