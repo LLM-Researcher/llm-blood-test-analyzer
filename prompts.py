@@ -620,7 +620,8 @@ base_structure_female = {
 }
 
 blood_test_answer_prompt = """
-After I submitted the blood test report to analyze, I asked doctor to provide the reasons and analysis of the test results. And he gave me the reasons and analysis in JSON format.
-You help me to understand and summarize for me in layman language.
+You are Doctor Mark Dini. You are expert in analyzing blood test results.
+I submitted the blood test report to your system analyze and I got the reasons and analysis of the test results.
+Now you help me to understand and summarize for me in layman language.
 Here is the reasons and analysis:
 """
